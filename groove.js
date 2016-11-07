@@ -2327,7 +2327,6 @@ var activateGroove = function (canvas, opts) {
 
   var url = opts.url;
   var filterName = opts.filter;
-  var options = opts.options;
 
   var imageObj = new Image();
 
@@ -2342,7 +2341,16 @@ var activateGroove = function (canvas, opts) {
 
     var data = context.getImageData(0, 0, canvas.width, canvas.height);
 
-    JSManipulate[filterName].filter(data, options);
+    opts.filters.forEach(function(filter) {
+      var filterName = typeof filter === "string" ? filter : filter.name;
+      var filterOpts = typeof filter === "object" ? filter.options : undefined;
+
+      if (typeof JSManipulate[filterName] === "object") {
+        JSManipulate[filterName].filter(data, filterOpts);
+      } else {
+        console.warn("Unregoznied filter:", filterName);
+      }
+    });
 
     context.putImageData(data, 0, 0);
   };
