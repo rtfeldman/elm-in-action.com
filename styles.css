@@ -9,6 +9,7 @@ img, canvas { border: 1px solid white; margin: 5px; }
 #thumbnails.large img { width: 200px; }
 #choose-size { float: left; margin-left: 20px; }
 #choose-size > span { display: inline-block; margin: 0 10px; }
+#activate-groove { float: right; margin-right: 20px; margin-top: 15px; }
 
 h1 { color: #60b5cc; margin-bottom: 0; }
 h3 { float: left; margin: 0 }
