@@ -2342,8 +2342,12 @@ var activateGroove = function (canvas, opts) {
     var data = context.getImageData(0, 0, canvas.width, canvas.height);
 
     opts.filters.forEach(function(filter) {
-      var filterName = typeof filter === "string" ? filter : filter.name;
+      var filterName = (typeof filter === "string" ? filter : filter.name).toLowerCase();
       var filterOpts;
+
+      if (filterName === "ripple") {
+        filterName = "sineripple";
+      }
 
       if (typeof filter === "object") {
         var multiplier = Math.max(0.0, Math.min(1.0, filter.value));
