@@ -2343,7 +2343,41 @@ var activateGroove = function (canvas, opts) {
 
     opts.filters.forEach(function(filter) {
       var filterName = typeof filter === "string" ? filter : filter.name;
-      var filterOpts = typeof filter === "object" ? filter.options : undefined;
+      var filterOpts;
+
+      if (typeof filter === "object") {
+        var multiplier = Math.max(0.0, Math.min(1.0, filter.value));
+
+        switch (filterName) {
+          case "sepia":
+            filterOpts = {amount: Math.round(multiplier * 30)};
+            break;
+
+          case "circlesmear":
+            filterOpts = {density: multiplier};
+            break;
+
+          case "noise":
+            filterOpts = {amount: Math.round(multiplier * 100)};
+            break;
+
+          case "oil":
+            filterOpts = {range: Math.round(multiplier * 5)};
+            break;
+
+          case "sineripple":
+            filterOpts = {xAmplitude: Math.round(multiplier * 30)};
+            break;
+
+          case "hue":
+            filterOpts = {amount: 1.0 - (multiplier * 2.0)};
+            break;
+
+          case "vignette":
+            filterOpts = {amount: multiplier};
+            break;
+        }
+      }
 
       if (typeof JSManipulate[filterName] === "object") {
         JSManipulate[filterName].filter(data, filterOpts);
