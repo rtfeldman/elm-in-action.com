@@ -25,3 +25,30 @@ button:hover {
   background-color: white;
 }
 #thumbnails, img.large, #choose-size, h3 { margin-top: 20px; }
+
+.filters {
+  width: 318px;
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-slider {
+  width: 300px;
+  display: flex;
+}
+
+.filter-slider label {
+  width: 50px;
+  display: inline-block;
+  padding-top: 5px;
+}
+
+.filters paper-slider {
+  flex-grow: 1;
+}
+
+.filters input {
+  flex-grow: 1;
+  margin: 5px 20px;
+}
