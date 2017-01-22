@@ -2350,6 +2350,10 @@ var activateGroove = function (canvas, opts) {
       }
 
       if (typeof filter === "object") {
+        if (filter.amount === 0) {
+          return;
+        }
+
         var multiplier = Math.max(0, Math.min(11, filter.amount)) / 11;
 
         switch (filterName) {
