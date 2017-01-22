@@ -2354,7 +2354,7 @@ var activateGroove = function (canvas, opts) {
           return;
         }
 
-        var multiplier = Math.max(0, Math.min(11, filter.amount)) / 11;
+        var multiplier = Math.max(0.0, Math.min(1.0, filter.amount));
 
         switch (filterName) {
           case "sepia":
