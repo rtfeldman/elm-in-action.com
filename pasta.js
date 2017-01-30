@@ -2311,7 +2311,7 @@ var JSManipulate = {
 
 /*
 =========================================================================
-   Groove
+   Pasta
 
 The code below was added by Richard Feldman
 
@@ -2319,8 +2319,17 @@ MIT LICENSED (http://www.opensource.org/licenses/mit-license.php)
 Copyright (c) 2016, Richard Feldman
 =========================================================================
 */
+var statusListeners = [];
 
-var activateGroove = function (canvas, opts) {
+var addStatusListener = function(callback) {
+  statusListeners.push(callback);
+};
+
+var updatePastaStatus = function(status) {
+  statusListeners.forEach(function(callback) { callback(status); });
+};
+
+var activatePasta = function(canvas, opts) {
   if (!canvas) {
     return;
   }
@@ -2333,6 +2342,10 @@ var activateGroove = function (canvas, opts) {
   imageObj.setAttribute("crossorigin", true);
 
   imageObj.onload = function() {
+    updatePastaStatus("Rendering a " + imageObj.width + "x" + imageObj.height + " image...");
+
+    var startTimeMs = new Date().getTime();
+
     canvas.width = imageObj.width;
     canvas.height = imageObj.height;
 
@@ -2395,9 +2408,11 @@ var activateGroove = function (canvas, opts) {
     });
 
     context.putImageData(data, 0, 0);
+
+    updatePastaStatus("Applied some tasty filters in " + (new Date().getTime() - startTimeMs) + " ms.");
   };
 
   imageObj.src = url;
 }
 
-Groove = { activate: activateGroove };
+Pasta = { activate: activatePasta, addStatusListener: addStatusListener, version: "4.2" };
