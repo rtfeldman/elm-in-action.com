@@ -2415,4 +2415,4 @@ var activatePasta = function(canvas, opts) {
   imageObj.src = url;
 }
 
-Pasta = { activate: activatePasta, addStatusListener: addStatusListener, version: "4.2" };
+Pasta = { apply: activatePasta, addStatusListener: addStatusListener, version: "4.2" };
