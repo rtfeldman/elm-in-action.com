@@ -1,0 +1,49 @@
+{
+  "name": "All Photos",
+  "photos": {
+    "2turtles.jpg": {
+      "2turtles.jpg": {
+        "title": "Turtles & sandals",
+        "related_photos": [
+          "beachday.jpg"
+        ],
+        "size": 14
+      },
+      "beachday.jpg": {
+        "title": "At Chang\u2019s Beach!",
+        "related_photos": [
+          "day1maui.jpg",
+          "2turtles.jpg"
+        ],
+        "size": 24
+      },
+      "day1maui.jpg": {
+        "title": "First day on Maui",
+        "related_photos": [
+          "beachday.jpg"
+        ],
+        "size": 76
+      }
+    }
+  },
+  "subfolders": [
+    {
+      "name": "pics from 2016",
+      "photos": {
+
+      },
+      "subfolders": [
+
+      ]
+    },
+    {
+      "name": "pics from 2017",
+      "photos": {
+
+      },
+      "subfolders": [
+
+      ]
+    }
+  ]
+}
