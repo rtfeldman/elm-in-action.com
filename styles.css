@@ -58,3 +58,81 @@ button:hover {
   top: 40px;
   right: 100px;
 }
+
+.folder { margin-left: 30px; }
+.folder > label {
+  background-color: #555;
+  margin: 6px 8px;
+  padding: 6px 8px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.folder > label:hover {
+  background-color: #60b5cc;
+}
+
+.folder.expanded label::before {
+  content: "▸";
+  margin-right: 12px;
+}
+
+.folder.collapsed label::before {
+  content: "▾";
+  margin-right: 12px;
+}
+
+.photo {
+  padding: 6px 8px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.photo:hover {
+  background-color: #60b5cc;
+}
+
+.folders, .selected-photo {
+  float: left;
+}
+
+.selected-photo h3 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: #60b5cc;
+}
+
+.selected-photo img {
+  display: block;
+}
+
+.folders {
+  width: 360px;
+}
+
+.selected-photo {
+  width: 600px;
+}
+
+.content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.related-photos {
+  clear: both;
+}
+
+.related-photo {
+  float: left;
+}
+
+.related-photo:hover {
+  float: left;
+  border-color: #60b5cc;
+}
+
+.related-photo {
+  cursor: pointer;
+        }
