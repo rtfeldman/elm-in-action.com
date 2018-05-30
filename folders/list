@@ -1,43 +1,71 @@
 {
   "name": "All Photos",
-  "photos": {
-    "2turtles.jpg": {
-      "2turtles.jpg": {
-        "title": "Turtles & sandals",
-        "related_photos": [
-          "beachday.jpg"
-        ],
-        "size": 14
-      },
-      "beachday.jpg": {
-        "title": "At Chang\u2019s Beach!",
-        "related_photos": [
-          "day1maui.jpg",
-          "2turtles.jpg"
-        ],
-        "size": 24
-      },
-      "day1maui.jpg": {
-        "title": "First day on Maui",
-        "related_photos": [
-          "beachday.jpg"
-        ],
-        "size": 76
-      }
-    }
-  },
+  "photos": {},
   "subfolders": [
     {
-      "name": "pics from 2016",
-      "photos": {
-
-      },
+      "name": "2016",
+      "photos": {},
       "subfolders": [
-
+        {
+          "name": "Aloha",
+          "photos": {
+            "2turtles": {
+              "title": "Turtles & sandals",
+              "related_photos": [
+                "beach"
+              ],
+              "size": 27
+            },
+            "beach": {
+              "title": "At Chang’s Beach",
+              "related_photos": [
+                "wake",
+                "2turtles"
+              ],
+              "size": 36
+            },
+            "wake": {
+              "title": "First day on Maui",
+              "related_photos": [
+                "beach"
+              ],
+              "size": 21
+            }
+          },
+          "subfolders": []
+        },
+        {
+          "name": "Metal",
+          "photos": {
+            "epica": {
+              "title": "Simone Simons",
+              "related_photos": [
+                "Noora", "Joakim"
+              ],
+              "size": 20
+            },
+            "Noora": {
+              "title": "Noora Louhimo",
+              "related_photos": [
+                "epica",
+                "Joakim"
+              ],
+              "size": 29
+            },
+            "Joakim": {
+              "title": "Joakim Brodén",
+              "related_photos": [
+                "Noora", "epica"
+              ],
+              "size": 29
+            }
+          },
+          "subfolders": []
+        }
       ]
     },
     {
-      "name": "pics from 2017",
+      "name": "2017",
       "photos": {
 
       },
