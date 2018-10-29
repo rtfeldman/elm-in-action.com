@@ -29,28 +29,43 @@ button:hover {
 .filters {
   width: 318px;
   float: right;
-  display: flex;
-  flex-direction: column;
 }
 
 .filter-slider {
   width: 300px;
-  display: flex;
 }
 
 .filter-slider label {
-  width: 50px;
+  width: 70px;
   display: inline-block;
   padding-top: 5px;
 }
 
-.filters paper-slider {
-  flex-grow: 1;
+range-slider {
+  width: 120px;
+  margin-top: 5px;
+  margin-right: 15px;
+  display: inline-block;
 }
 
-.filters input {
-  flex-grow: 1;
-  margin: 5px 20px;
+range-slider .jsr {
+  margin: 0;
+}
+
+range-slider .jsr_rail-outer {
+  padding: 0;
+}
+
+range-slider .jsr_rail {
+  background: none;
+}
+
+range-slider .jsr_label {
+  display: none;
+}
+
+range-slider .jsr_slider:focus::before {
+  background: rgb(96, 181, 204);
 }
 
 .status {
@@ -135,4 +150,5 @@ button:hover {
 
 .related-photo {
   cursor: pointer;
-        }
+}
+
