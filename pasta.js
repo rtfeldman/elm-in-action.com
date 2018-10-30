@@ -2321,11 +2321,11 @@ Copyright (c) 2016, Richard Feldman
 */
 var statusListeners = [];
 
-var addStatusListener = function(callback) {
+var addActivityListener = function(callback) {
   statusListeners.push(callback);
 };
 
-var updatePastaStatus = function(status) {
+var updatePastaActivity = function(status) {
   statusListeners.forEach(function(callback) { callback(status); });
 };
 
@@ -2342,7 +2342,7 @@ var activatePasta = function(canvas, opts) {
   imageObj.setAttribute("crossorigin", true);
 
   imageObj.onload = function() {
-    updatePastaStatus("Rendering a " + imageObj.width + "x" + imageObj.height + " image...");
+    updatePastaActivity("Rendering a " + imageObj.width + "x" + imageObj.height + " image...");
 
     var startTimeMs = new Date().getTime();
 
@@ -2409,10 +2409,10 @@ var activatePasta = function(canvas, opts) {
 
     context.putImageData(data, 0, 0);
 
-    updatePastaStatus("Applied some tasty filters in " + (new Date().getTime() - startTimeMs) + " ms.");
+    updatePastaActivity("Applied some tasty filters in " + (new Date().getTime() - startTimeMs) + " ms.");
   };
 
   imageObj.src = url;
 }
 
-Pasta = { apply: activatePasta, addStatusListener: addStatusListener, version: 4.2 };
+Pasta = { apply: activatePasta, addActivityListener: addActivityListener, version: 4.2 };

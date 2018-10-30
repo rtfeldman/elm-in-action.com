@@ -68,7 +68,7 @@ range-slider .jsr_slider:focus::before {
   background: rgb(96, 181, 204);
 }
 
-.status {
+.activity {
   position: absolute;
   top: 40px;
   right: 100px;
