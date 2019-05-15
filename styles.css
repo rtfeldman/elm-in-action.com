@@ -101,6 +101,9 @@ range-slider .jsr_slider:focus::before {
   padding: 6px 8px;
   margin-left: 30px;
   cursor: pointer;
+  color: white;
+  display: block;
+  text-decoration: none;
 }
 
 .photo:hover {
@@ -109,6 +112,8 @@ range-slider .jsr_slider:focus::before {
 
 .folders, .selected-photo {
   float: left;
+  min-height: 400px;
+  width: 360px;
 }
 
 .selected-photo h3 {
@@ -119,10 +124,6 @@ range-slider .jsr_slider:focus::before {
 
 .selected-photo img {
   display: block;
-}
-
-.folders {
-  width: 360px;
 }
 
 .selected-photo {
@@ -152,3 +153,32 @@ range-slider .jsr_slider:focus::before {
   cursor: pointer;
 }
 
+nav ul {
+  list-style: none;
+  display: inline-block;
+}
+
+nav li, nav h1 {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 5px 15px;
+  color: white;
+  font-weight: bold;
+}
+
+nav .active {
+  text-decoration: underline;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  color: #bbb;
+  margin: 20px;
+  margin-top: 60px;
+}
